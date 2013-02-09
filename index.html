@@ -5,7 +5,7 @@
 		<title>DTCoreText Reference</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -38,12 +38,6 @@
 
 <p>This project aims to duplicate the methods present on Mac OSX which allow creation of <code>NSAttributedString</code> from HTML code on iOS. Previously we referred to it as NSAttributedString+HTML (or NSAS+HTML in short) but this only covers about half of what this framework does.</p>
 
-<p>Please support us so that we can continue to make DTCoreText even more awesome!</p>
-
-<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M5DZ3PAN7NW8J">
-<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-</a></p>
-
 <p>The project covers two broad areas:</p>
 
 <ol>
@@ -62,6 +56,16 @@
 
 <p>Follow <a href="http://twitter.com/cocoanetics">@cocoanetics</a> on Twitter.</p>
 
+<h2>Changelog</h2>
+
+<ul>
+<li><a href="http://www.cocoanetics.com/2013/01/dtcoretext-1-2-0/">Version 1.2</a></li>
+<li><a href="http://www.cocoanetics.com/2012/12/dtcoretext-1-1/">Version 1.1</a></li>
+<li><a href="http://www.cocoanetics.com/2012/04/dtcoretext-1-0-1-linker-flags-and-rich-text-news/">Version 1.0.1</a></li>
+<li><a href="http://www.cocoanetics.com/2012/02/dtrichtexteditor-dtcoretext-news/">Version 1.0</a></li>
+</ul>
+
+
 <h2>License</h2>
 
 <p>It is open source and covered by a standard BSD license. That means you have to mention <em>Cocoanetics</em> as the original author of this code. You can purchase a Non-Attribution-License from us.</p>
@@ -70,9 +74,9 @@
 
 <p>Documentation can be <a href="http://cocoanetics.github.com/DTCoreText">browsed online</a> or installed in your Xcode Organizer via the <a href="http://cocoanetics.github.com/DTCoreText/DTCoreText.atom">Atom Feed URL</a>.</p>
 
-<h2>Usage</h2>
+<h2>Requirements</h2>
 
-<p>DTCoreText needs a minimum iOS deployment target of 4.3 because of:</p>
+<p>DTCoreText needs a minimum iOS deployment target of iOS 4.2 because of:</p>
 
 <ul>
 <li>NSCache</li>
@@ -82,64 +86,54 @@
 </ul>
 
 
-<p>The best way to use DTCoreText with Xcode 4.2 is to add it in Xcode as a subproject of your project with the following steps.</p>
+<p>DTCoreText is designed to be included as static library from a subproject, it embeds several classes from the DTFoundation project. If you want to use DTFoundation as well in your project you need to use the &ldquo;Static Library (no DTFoundation)&rdquo; target to avoid duplicate symbols.</p>
+
+<h2>Setup</h2>
+
+<p>The best way to use DTCoreText is to add it in Xcode as a subproject of your project with the following steps.</p>
 
 <ol>
-<li>Download DTCoreText as a subfolder of your project folder</li>
-<li>Open the destination project and drag <code>DTCoreText.xcodeproj</code> as a subordinate item in the Project Navigator</li>
-<li><p>In your prefix.pch file add:</p>
+<li><p>Make DTCoreText a git submodule of your project</p>
 
-<pre><code> #import "DTCoreText.h"
-</code></pre></li>
-<li><p>In your application target&rsquo;s Build Phases add the &ldquo;Static Library&rdquo; from the DTCoreText sub-project as a dependency.</p></li>
-<li><p>In your application target&rsquo;s Build Phases add all of the below to the Link Binary With Libraries phase (you can also do this from the Target&rsquo;s Summary view in the Linked Frameworks and Libraries):</p>
+<p><code>git submodule add </code>https://github.com/Cocoanetics/DTCoreText.git<code> Externals/DTCoreText</code></p></li>
+<li><p>DTCoreText uses DTHTMLParser and DTVersion from DTFoundation which is set up as a git submodule in Core/Externals/DTFoundation, so you need to get these files as well</p>
 
-<pre><code> The "Static Library" target from the DTCoreText sub-project
+<p><code>git submodule update --init --recursive</code></p></li>
+<li><p>Open the destination project and create an &ldquo;Externals&rdquo; group.</p></li>
+<li><p>Add files… or drag <code>DTCoreText.xcodeproj</code> to the Externals group</p></li>
+<li><p>In your application target&rsquo;s Build Phases: Target Dependencies add the <code>Static Library</code> from the DTCoreText sub project</p></li>
+<li><p>In your application target&rsquo;s Build Phases: Link Binary With Libraries phase add the following:</p>
+
+<pre><code> libDTCoreText.a (target from the DTCoreText sub-project)
+ libxml2.dylib
  ImageIO.framework
  QuartzCore.framework
- libxml2.dylib
- CoreText.framework (DOH!)
+ CoreText.framework
+ MobileCoreServices.framework
 </code></pre></li>
 <li><p>Go to File: Project Settings… and change the derived data location to project-relative.</p></li>
-<li>Add the DerivedData folder to your git ignore.</li>
-<li>In your application&rsquo;s target Build Settings:
+<li><p>Add the DerivedData folder to your git ignore.</p></li>
+<li><p>In your application&rsquo;s target Build Settings:</p>
 
 <ul>
-<li>Set the &ldquo;User Header Search Paths&rdquo; to the directory containing your project with recrusive set to YES.</li>
-<li>Set the Header Search Paths to /usr/include/libxml2.</li>
-<li>Set &ldquo;Always Search User Paths&rdquo; to YES.</li>
-<li>Set the &ldquo;Other Linker Flags&rdquo; below</li>
+<li>Add <code>$(PROJECT_DIR)</code> to <code>User Header Search Paths</code>, set to <code>recursive</code></li>
+<li>Set <code>Always Search User Paths</code> to <code>Yes</code>.</li>
+<li>Add the <code>-ObjC</code> flag to your app target&rsquo;s <code>Other Linker Flags</code></li>
 </ul>
 </li>
 </ol>
 
 
-<p>If you do not want to deal with Git submodules simply add DTCoreText to your project&rsquo;s git ignore file and pull updates to DTCoreText as its own independent Git repository. Otherwise you are free to add DTCoreText as a submodule.</p>
-
-<p>LINKER SETTINGS:</p>
-
-<ul>
-<li> add the -ObjC to your app target&rsquo;s &ldquo;Other Linker Flags&rdquo;. This is needed whenever you link in any static library that contains Objective-C classes and categories.</li>
-<li> if you find that your app crashes with an unrecognized selector from one of this library&rsquo;s categories, you might also need the -all_load linker flag. Alternatively you can use -force-load with the full path to the static library. This causes the linker to load all categories from the static library.</li>
-<li> If your app does not use ARC yet (but DTCoreText does) then you also need the -fobjc-arc linker flag.</li>
-</ul>
-
-
-<p><em>Other Options (only mentioned for completeness)</em></p>
-
-<ul>
-<li>Copy all classes and headers from the Core/Source folder to your project. Note for this you need to also generate and include the xxd'ed version of default.css.</li>
-<li>Link your project against the libDTCoreText static library that you previously compiled. Note that the &ldquo;Static Library&rdquo; target does not produce a universal library. You will also need to add all header files contained in the Core/Source folder to your project.</li>
-<li>Link your project against the universal static library produced from the &ldquo;Static Framework&rdquo;.</li>
-</ul>
-
+<p>OPTIONAL LINKER SETTINGS:
+   &ndash; If you find that your app crashes with an unrecognized selector from one of this library&rsquo;s categories, you might also need the <code>-all_load linker</code> flag. Alternatively you can use <code>-force-load</code> with the full path to the static library. This causes the linker to load all categories from the static library.
+   &ndash; If your app does not use ARC yet (but DTCoreText does) then you also need the <code>-fobjc-arc</code> linker flag.</p>
 
 <h2>Known Issues</h2>
 
 <p>CoreText has a problem prior to iOS 5 where it takes around a second on device to initialize its internal font lookup table. You have two workarounds available:</p>
 
 <ul>
-<li>trigger the loading on a background thread like shown in http://www.cocoanetics.com/2011/04/coretext-loading-performance/</li>
+<li>trigger the loading on a background thread like shown in <a href="http://www.cocoanetics.com/2011/04/coretext-loading-performance/">http://www.cocoanetics.com/2011/04/coretext-loading-performance/</a></li>
 <li>if you only use certain fonts then add the variants to the DTCoreTextFontOverrides.plist, this speeds up the finding of a specific font face from the font family</li>
 </ul>
 
@@ -148,7 +142,7 @@
 
 <p>In many aspects DTCoreText is superior to the Mac version of generating NSAttributedStrings from HTML. These become apparent in the MacUnitTest where the output from both is directly compared. I am summarizing them here for references.</p>
 
-<p>In the following &ldquo;Mac&rdquo; means the initWithHTML: methods there, &ldquo;DTCoreText&rdquo; means DTCoreText&rsquo;s initWithHTML and/or DTHTMLAttributedStringBuilder.</p>
+<p>In the following &ldquo;Mac&rdquo; means the initWithHTML: methods there, &ldquo;DTCoreText&rdquo; means DTCoreText&rsquo;s initWithHTML and/or <a href="Classes/DTHTMLAttributedStringBuilder.html">DTHTMLAttributedStringBuilder</a>.</p>
 
 <ul>
 <li>Mac does not support the video tag, DTCoreText does.</li>
@@ -171,6 +165,8 @@
 					<div class="index-column">
 						<h2 class="index-title">Class References</h2>
 						<ul>
+							
+							<li><a href="Classes/DTAttributedLabel.html">DTAttributedLabel</a></li>
 							
 							<li><a href="Classes/DTAttributedTextCell.html">DTAttributedTextCell</a></li>
 							
@@ -196,11 +192,31 @@
 							
 							<li><a href="Classes/DTCoreTextParagraphStyle.html">DTCoreTextParagraphStyle</a></li>
 							
+							<li><a href="Classes/DTDictationPlaceholderTextAttachment.html">DTDictationPlaceholderTextAttachment</a></li>
+							
+							<li><a href="Classes/DTDictationPlaceholderView.html">DTDictationPlaceholderView</a></li>
+							
 							<li><a href="Classes/DTHTMLAttributedStringBuilder.html">DTHTMLAttributedStringBuilder</a></li>
 							
 							<li><a href="Classes/DTHTMLElement.html">DTHTMLElement</a></li>
 							
-							<li><a href="Classes/DTHTMLParser.html">DTHTMLParser</a></li>
+							<li><a href="Classes/DTHTMLElementAttachment.html">DTHTMLElementAttachment</a></li>
+							
+							<li><a href="Classes/DTHTMLElementBR.html">DTHTMLElementBR</a></li>
+							
+							<li><a href="Classes/DTHTMLElementHR.html">DTHTMLElementHR</a></li>
+							
+							<li><a href="Classes/DTHTMLElementLI.html">DTHTMLElementLI</a></li>
+							
+							<li><a href="Classes/DTHTMLElementStylesheet.html">DTHTMLElementStylesheet</a></li>
+							
+							<li><a href="Classes/DTHTMLElementText.html">DTHTMLElementText</a></li>
+							
+							<li><a href="Classes/DTHTMLParserNode.html">DTHTMLParserNode</a></li>
+							
+							<li><a href="Classes/DTHTMLParserTextNode.html">DTHTMLParserTextNode</a></li>
+							
+							<li><a href="Classes/DTHTMLWriter.html">DTHTMLWriter</a></li>
 							
 							<li><a href="Classes/DTLazyImageView.html">DTLazyImageView</a></li>
 							
@@ -224,8 +240,6 @@
 							
 							<li><a href="Protocols/DTAttributedTextContentViewDelegate.html">DTAttributedTextContentViewDelegate</a></li>
 							
-							<li><a href="Protocols/DTHTMLParserDelegate.html">DTHTMLParserDelegate</a></li>
-							
 							<li><a href="Protocols/DTLazyImageViewDelegate.html">DTLazyImageViewDelegate</a></li>
 							
 							<li><a href="Protocols/DTWebVideoViewDelegate.html">DTWebVideoViewDelegate</a></li>
@@ -246,8 +260,6 @@
 							
 							<li><a href="Categories/NSColor+HTML.html">NSColor(HTML)</a></li>
 							
-							<li><a href="Categories/NSData+DTBase64.html">NSData(DTBase64)</a></li>
-							
 							<li><a href="Categories/NSImage+HTML.html">NSImage(HTML)</a></li>
 							
 							<li><a href="Categories/NSMutableAttributedString+HTML.html">NSMutableAttributedString(HTML)</a></li>
@@ -266,7 +278,7 @@
 							
 							<li><a href="Categories/UIColor+HTML.html">UIColor(HTML)</a></li>
 							
-							<li><a href="Categories/UIDevice+DTSimpleVersion.html">UIDevice(DTSimpleVersion)</a></li>
+							<li><a href="Categories/UIFont+DTCoreText.html">UIFont(DTCoreText)</a></li>
 							
 							<li><a href="Categories/UIImage+HTML.html">UIImage(HTML)</a></li>
 							
@@ -281,9 +293,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
 	
 					</div>
