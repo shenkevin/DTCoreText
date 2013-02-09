@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>DTLinkButton Class Reference</title>
+		<title>DTHTMLWriter Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">DTLinkButton Class Reference</h1>
+				<h1 class="hideInXcode">DTHTMLWriter Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -40,21 +40,20 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/GUID">&nbsp;&nbsp;&nbsp;&nbsp;GUID</option>
-	
-	<option value="//api/name/URL">&nbsp;&nbsp;&nbsp;&nbsp;URL</option>
-	
 	<option value="//api/name/attributedString">&nbsp;&nbsp;&nbsp;&nbsp;attributedString</option>
 	
-	<option value="//api/name/highlightedAttributedString">&nbsp;&nbsp;&nbsp;&nbsp;highlightedAttributedString</option>
-	
-	<option value="//api/name/minimumHitSize">&nbsp;&nbsp;&nbsp;&nbsp;minimumHitSize</option>
-	
-	<option value="//api/name/showsTouchWhenHighlighted">&nbsp;&nbsp;&nbsp;&nbsp;showsTouchWhenHighlighted</option>
+	<option value="//api/name/textScale">&nbsp;&nbsp;&nbsp;&nbsp;textScale</option>
 	
 	
 	
 	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/HTMLString">&nbsp;&nbsp;&nbsp;&nbsp;- HTMLString</option>
+	
+	<option value="//api/name/initWithAttributedString:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAttributedString:</option>
 	
 	
 	
@@ -80,17 +79,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/GUID">GUID</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/URL">URL</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributedString">attributedString</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/highlightedAttributedString">highlightedAttributedString</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minimumHitSize">minimumHitSize</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showsTouchWhenHighlighted">showsTouchWhenHighlighted</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textScale">textScale</a></span></li>
 	
 </ul></li>
 
@@ -98,12 +89,20 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/HTMLString">HTMLString</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAttributedString:">initWithAttributedString:</a></span></li>
+	
+</ul></li>
+
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="DTLinkButton Class Reference" name="top"></a>
+				<a title="DTHTMLWriter Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -112,7 +111,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">DTLinkButton Class Reference</h1>
+						<h1 class="title title-header">DTHTMLWriter Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -120,10 +119,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UIButton</td>
+	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">DTLinkButton.h</td>
+	<td class="specification-value">DTHTMLWriter.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -133,9 +132,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A button that corresponds to a hyperlink.</p>
-
-<p>Multiple parts of the same hyperlink synchronize their looks through the guid.</p>
+						<p>Class to generate HTML from <code>NSAttributedString</code> instances.</p>
 					</div>
 					
 					
@@ -153,43 +150,29 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/URL">&nbsp;&nbsp;URL</a></code>
-		<span class="tooltip"><p>The URL that this button corresponds to.</p></span>
+		<code><a href="#//api/name/initWithAttributedString:">&ndash;&nbsp;initWithAttributedString:</a></code>
+		<span class="tooltip"><p>Creates a writer with a given <code>NSAttributedString</code> as input</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/GUID">&nbsp;&nbsp;GUID</a></code>
-		<span class="tooltip"><p>The unique identifier (GUID) that all parts of the same hyperlink have in common.</p></span>
+		<code><a href="#//api/name/HTMLString">&ndash;&nbsp;HTMLString</a></code>
+		<span class="tooltip"><p>Generates a HTML representation of the attributed string</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/minimumHitSize">&nbsp;&nbsp;minimumHitSize</a></code>
-		<span class="tooltip"><p>The minimum size that the receiver should respond on hits with. Adjusts the bounds if they are smaller than the passed size.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/showsTouchWhenHighlighted">&nbsp;&nbsp;showsTouchWhenHighlighted</a></code>
-		<span class="tooltip"><p>A Boolean value that determines whether tapping the button causes it to show a gray rounded rectangle. Default is YES.</p></span>
+		<code><a href="#//api/name/textScale">&nbsp;&nbsp;textScale</a></code>
+		<span class="tooltip"><p>If specified then all absolute font sizes (px) will be divided by this value. This is useful if you specified a text size multiplicator when converting HTML to the attributed string you are processing.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/attributedString">&nbsp;&nbsp;attributedString</a></code>
-		<span class="tooltip"><p>The attributed string to be drawn for the link button.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/highlightedAttributedString">&nbsp;&nbsp;highlightedAttributedString</a></code>
-		<span class="tooltip"><p>The attributed string to be drawn for the link button while it is highlighted.</p></span>
+		<span class="tooltip"><p>The attributed string that the writer is processing.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -207,85 +190,17 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/GUID" title="GUID"></a>
-	<h3 class="subsubtitle method-title">GUID</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The unique identifier (GUID) that all parts of the same hyperlink have in common.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *GUID</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTLinkButton.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/URL" title="URL"></a>
-	<h3 class="subsubtitle method-title">URL</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The URL that this button corresponds to.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSURL *URL</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTLinkButton.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/attributedString" title="attributedString"></a>
 	<h3 class="subsubtitle method-title">attributedString</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The attributed string to be drawn for the link button.</p>
+		<p>The attributed string that the writer is processing.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSAttributedString *attributedString</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSAttributedString *attributedString</code></div>
 	
 	
 	
@@ -302,24 +217,24 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTLinkButton.h</code><br />
+		<code class="declared-in-ref">DTHTMLWriter.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/highlightedAttributedString" title="highlightedAttributedString"></a>
-	<h3 class="subsubtitle method-title">highlightedAttributedString</h3>
+	<a name="//api/name/textScale" title="textScale"></a>
+	<h3 class="subsubtitle method-title">textScale</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The attributed string to be drawn for the link button while it is highlighted.</p>
+		<p>If specified then all absolute font sizes (px) will be divided by this value. This is useful if you specified a text size multiplicator when converting HTML to the attributed string you are processing.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSAttributedString *highlightedAttributedString</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat textScale</code></div>
 	
 	
 	
@@ -336,75 +251,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTLinkButton.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/minimumHitSize" title="minimumHitSize"></a>
-	<h3 class="subsubtitle method-title">minimumHitSize</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The minimum size that the receiver should respond on hits with. Adjusts the bounds if they are smaller than the passed size.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGSize minimumHitSize</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTLinkButton.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/showsTouchWhenHighlighted" title="showsTouchWhenHighlighted"></a>
-	<h3 class="subsubtitle method-title">showsTouchWhenHighlighted</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>A Boolean value that determines whether tapping the button causes it to show a gray rounded rectangle. Default is YES.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL showsTouchWhenHighlighted</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DTLinkButton.h</code><br />
+		<code class="declared-in-ref">DTHTMLWriter.h</code><br />
 	</div>				
 	
 	
@@ -415,6 +262,95 @@
 					
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/HTMLString" title="HTMLString"></a>
+	<h3 class="subsubtitle method-title">HTMLString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates a HTML representation of the attributed string</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)HTMLString</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The generated string</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTHTMLWriter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAttributedString:" title="initWithAttributedString:"></a>
+	<h3 class="subsubtitle method-title">initWithAttributedString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a writer with a given <code>NSAttributedString</code> as input</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithAttributedString:(NSAttributedString *)<em>attributedString</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attributedString</em></dt>
+			<dd><p>An attributed string</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTHTMLWriter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 				</div>

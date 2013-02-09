@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>NSMutableString(HTML) Category Reference</title>
+		<title>DTHTMLElementStylesheet Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">NSMutableString(HTML) Category Reference</h1>
+				<h1 class="hideInXcode">DTHTMLElementStylesheet Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -44,7 +44,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/removeTrailingWhitespace">&nbsp;&nbsp;&nbsp;&nbsp;- removeTrailingWhitespace</option>
+	<option value="//api/name/stylesheet">&nbsp;&nbsp;&nbsp;&nbsp;- stylesheet</option>
 	
 	
 	
@@ -74,7 +74,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeTrailingWhitespace">removeTrailingWhitespace</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stylesheet">stylesheet</a></span></li>
 	
 </ul></li>
 
@@ -83,7 +83,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="NSMutableString(HTML) Category Reference" name="top"></a>
+				<a title="DTHTMLElementStylesheet Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -92,15 +92,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">NSMutableString(HTML) Category Reference</h1>
+						<h1 class="title title-header">DTHTMLElementStylesheet Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/DTHTMLElement.html">DTHTMLElement</a> : <a href="../Classes/DTHTMLParserNode.html">DTHTMLParserNode</a> : NSObject</td>
+</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">NSMutableString+HTML.h</td>
+	<td class="specification-value">DTHTMLElementStylesheet.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,7 +113,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Categories needed for modifying mutable strings, as needed for DTCoreText.</p>
+						<p>This class represents STYLE tags.</p>
 					</div>
 					
 					
@@ -128,8 +131,8 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/removeTrailingWhitespace">&ndash;&nbsp;removeTrailingWhitespace</a></code>
-		<span class="tooltip"><p>Removes the trailing whitespace from the receiver.</p></span>
+		<code><a href="#//api/name/stylesheet">&ndash;&nbsp;stylesheet</a></code>
+		<span class="tooltip"><p>Parses the text children and assembles the resulting stylesheet.</p></span>
 	</span>
 	
 	
@@ -151,17 +154,17 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/removeTrailingWhitespace" title="removeTrailingWhitespace"></a>
-	<h3 class="subsubtitle method-title">removeTrailingWhitespace</h3>
+	<a name="//api/name/stylesheet" title="stylesheet"></a>
+	<h3 class="subsubtitle method-title">stylesheet</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Removes the trailing whitespace from the receiver.</p>
+		<p>Parses the text children and assembles the resulting stylesheet.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)removeTrailingWhitespace</code></div>
+	<div class="method-subsection method-declaration"><code>- (DTCSSStylesheet *)stylesheet</code></div>
 	
 	
 	
@@ -178,7 +181,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSMutableString+HTML.h</code><br />
+		<code class="declared-in-ref">DTHTMLElementStylesheet.h</code><br />
 	</div>				
 	
 	

@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -40,9 +42,11 @@
 	
 	<option value="//api/name/attributedString">&nbsp;&nbsp;&nbsp;&nbsp;attributedString</option>
 	
+	<option value="//api/name/attributedTextContentView">&nbsp;&nbsp;&nbsp;&nbsp;attributedTextContentView</option>
+	
 	<option value="//api/name/backgroundView">&nbsp;&nbsp;&nbsp;&nbsp;backgroundView</option>
 	
-	<option value="//api/name/contentView">&nbsp;&nbsp;&nbsp;&nbsp;contentView</option>
+	<option value="//api/name/shouldDrawLinks">&nbsp;&nbsp;&nbsp;&nbsp;shouldDrawLinks</option>
 	
 	<option value="//api/name/textDelegate">&nbsp;&nbsp;&nbsp;&nbsp;textDelegate</option>
 	
@@ -64,10 +68,20 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Providing Content">Providing Content</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Subviews">Accessing Subviews</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Customizing Display">Customizing Display</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_User Interaction">User Interaction</a></span></li>
 	
 </ul></li>
 
@@ -79,9 +93,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributedString">attributedString</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributedTextContentView">attributedTextContentView</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/backgroundView">backgroundView</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/contentView">contentView</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldDrawLinks">shouldDrawLinks</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textDelegate">textDelegate</a></span></li>
 	
@@ -129,6 +145,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This view is designed to be a replacement for <code>UITextView</code>. It is a <code>UIScrollView</code> subclass and creates a <a href="../Classes/DTAttributedTextContentView.html">DTAttributedTextContentView</a> as content view for displaying the text</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -136,39 +160,70 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Providing Content" name="task_Providing Content"></a>
+						<h3 class="subsubtitle task-title">Providing Content</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/attributedString">&nbsp;&nbsp;attributedString</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/contentView">&nbsp;&nbsp;contentView</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/backgroundView">&nbsp;&nbsp;backgroundView</a></code>
-		
+		<span class="tooltip"><p>The attributed text to be displayed in the text content view of the receiver.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/textDelegate">&nbsp;&nbsp;textDelegate</a></code>
-		
+		<span class="tooltip"><p>A delegate implementing <a href="../Protocols/DTAttributedTextContentViewDelegate.html">DTAttributedTextContentViewDelegate</a> to provide custom subviews for images and links.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing Subviews" name="task_Accessing Subviews"></a>
+						<h3 class="subsubtitle task-title">Accessing Subviews</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/attributedTextContentView">&nbsp;&nbsp;attributedTextContentView</a></code>
+		<span class="tooltip"><p>References to the <a href="../Classes/DTAttributedTextContentView.html">DTAttributedTextContentView</a> that display the text. This is not named contentView because this class inherits from <code>UIScrollView</code> which has an internal property of this name</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/backgroundView">&nbsp;&nbsp;backgroundView</a></code>
+		<span class="tooltip"><p>A view to be displayed behind the text content view</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Customizing Display" name="task_Customizing Display"></a>
+						<h3 class="subsubtitle task-title">Customizing Display</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldDrawLinks">&nbsp;&nbsp;shouldDrawLinks</a></code>
+		<span class="tooltip"><p>If the content view of the receiver should draw links. Set to <code>NO</code> if displaying links as custom views via <a href="#//api/name/textDelegate">textDelegate</a>;</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="User Interaction" name="task_User Interaction"></a>
+						<h3 class="subsubtitle task-title">User Interaction</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/scrollToAnchorNamed:animated:">&ndash;&nbsp;scrollToAnchorNamed:animated:</a></code>
 		<span class="tooltip"><p>Scrolls the receiver to the anchor with the given name to the top.</p></span>
@@ -193,6 +248,67 @@
 	<h3 class="subsubtitle method-title">attributedString</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The attributed text to be displayed in the text content view of the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSAttributedString *attributedString</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/attributedTextContentView" title="attributedTextContentView"></a>
+	<h3 class="subsubtitle method-title">attributedTextContentView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>References to the <a href="../Classes/DTAttributedTextContentView.html">DTAttributedTextContentView</a> that display the text. This is not named contentView because this class inherits from <code>UIScrollView</code> which has an internal property of this name</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) DTAttributedTextContentView *attributedTextContentView</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -200,11 +316,65 @@
 	<h3 class="subsubtitle method-title">backgroundView</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>A view to be displayed behind the text content view</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) IBOutlet UIView *backgroundView</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/contentView" title="contentView"></a>
-	<h3 class="subsubtitle method-title">contentView</h3>
+	<a name="//api/name/shouldDrawLinks" title="shouldDrawLinks"></a>
+	<h3 class="subsubtitle method-title">shouldDrawLinks</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If the content view of the receiver should draw links. Set to <code>NO</code> if displaying links as custom views via <a href="#//api/name/textDelegate">textDelegate</a>;</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shouldDrawLinks</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -212,6 +382,33 @@
 						<div class="section-method">
 	<a name="//api/name/textDelegate" title="textDelegate"></a>
 	<h3 class="subsubtitle method-title">textDelegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A delegate implementing <a href="../Protocols/DTAttributedTextContentViewDelegate.html">DTAttributedTextContentViewDelegate</a> to provide custom subviews for images and links.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, unsafe_unretained) IBOutlet id&lt;DTAttributedTextContentViewDelegate&gt; textDelegate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -288,9 +485,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
 					</div>
 				</div>

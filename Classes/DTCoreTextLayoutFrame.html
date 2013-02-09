@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -42,11 +42,19 @@
 	
 	<option value="//api/name/frame">&nbsp;&nbsp;&nbsp;&nbsp;frame</option>
 	
+	<option value="//api/name/lineBreakMode">&nbsp;&nbsp;&nbsp;&nbsp;lineBreakMode</option>
+	
 	<option value="//api/name/lines">&nbsp;&nbsp;&nbsp;&nbsp;lines</option>
+	
+	<option value="//api/name/noLeadingOnFirstLine">&nbsp;&nbsp;&nbsp;&nbsp;noLeadingOnFirstLine</option>
+	
+	<option value="//api/name/numberOfLines">&nbsp;&nbsp;&nbsp;&nbsp;numberOfLines</option>
 	
 	<option value="//api/name/paragraphRanges">&nbsp;&nbsp;&nbsp;&nbsp;paragraphRanges</option>
 	
 	<option value="//api/name/textBlockHandler">&nbsp;&nbsp;&nbsp;&nbsp;textBlockHandler</option>
+	
+	<option value="//api/name/truncationString">&nbsp;&nbsp;&nbsp;&nbsp;truncationString</option>
 	
 	
 	
@@ -54,6 +62,8 @@
 	<option value="class_methods">Class Methods</option>
 	
 	<option value="//api/name/setShouldDrawDebugFrames:">&nbsp;&nbsp;&nbsp;&nbsp;+ setShouldDrawDebugFrames:</option>
+	
+	<option value="//api/name/shouldDrawDebugFrames">&nbsp;&nbsp;&nbsp;&nbsp;+ shouldDrawDebugFrames</option>
 	
 	
 	
@@ -64,7 +74,7 @@
 	
 	<option value="//api/name/baselineOriginToPositionLine:afterLine:">&nbsp;&nbsp;&nbsp;&nbsp;- baselineOriginToPositionLine:afterLine:</option>
 	
-	<option value="//api/name/drawInContext:drawImages:">&nbsp;&nbsp;&nbsp;&nbsp;- drawInContext:drawImages:</option>
+	<option value="//api/name/drawInContext:drawImages:drawLinks:">&nbsp;&nbsp;&nbsp;&nbsp;- drawInContext:drawImages:drawLinks:</option>
 	
 	<option value="//api/name/frameOfGlyphAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- frameOfGlyphAtIndex:</option>
 	
@@ -130,6 +140,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Debugging">Debugging</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Truncation">Truncation</a></span></li>
+	
 </ul></li>
 
 
@@ -140,11 +152,19 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/frame">frame</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineBreakMode">lineBreakMode</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lines">lines</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/noLeadingOnFirstLine">noLeadingOnFirstLine</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfLines">numberOfLines</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/paragraphRanges">paragraphRanges</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textBlockHandler">textBlockHandler</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/truncationString">truncationString</a></span></li>
 	
 </ul></li>
 
@@ -153,6 +173,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setShouldDrawDebugFrames:">setShouldDrawDebugFrames:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldDrawDebugFrames">shouldDrawDebugFrames</a></span></li>
 	
 </ul></li>
 
@@ -164,7 +186,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/baselineOriginToPositionLine:afterLine:">baselineOriginToPositionLine:afterLine:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawInContext:drawImages:">drawInContext:drawImages:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawInContext:drawImages:drawLinks:">drawInContext:drawImages:drawLinks:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/frameOfGlyphAtIndex:">frameOfGlyphAtIndex:</a></span></li>
 	
@@ -235,11 +257,11 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>This class represents a single frame of text and basically wraps CTFrame. It provides an array of text lines that fit in the given rectangle.</p>
+						<p>This class represents a single <a href="#//api/name/frame">frame</a> of text and basically wraps CTFrame. It provides an array of text <a href="#//api/name/lines">lines</a> that fit in the given rectangle.</p>
 
-<p>Both styles of layouting are supported: open ended (suitable for scroll views) and limited to a given rectangle. To use the open-ended style specify <code>CGFLOAT_OPEN_HEIGHT</code> for the <a href="#//api/name/frame">frame</a> height when creating a layout frame.</p>
+<p>Both styles of layouting are supported: open ended (suitable for scroll views) and limited to a given rectangle. To use the open-ended style specify <code>CGFLOAT_OPEN_HEIGHT</code> for the <a href="#//api/name/frame">frame</a> height when creating a layout <a href="#//api/name/frame">frame</a>.</p>
 
-<p>The array of lines is built lazily the first time it is accessed or &ndash; for open-ended frames &ndash; when the frame property is being queried.</p>
+<p>The array of <a href="#//api/name/lines">lines</a> is built lazily the first time it is accessed or &ndash; for open-ended frames &ndash; when the <a href="#//api/name/frame">frame</a> property is being queried.</p>
 					</div>
 					
 					
@@ -258,14 +280,14 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithFrame:layouter:">&ndash;&nbsp;initWithFrame:layouter:</a></code>
-		<span class="tooltip"><p>Creates a Layout Frame with the given frame using the attributed string loaded into the layouter.</p></span>
+		<span class="tooltip"><p>Creates a Layout Frame with the given <a href="#//api/name/frame">frame</a> using the attributed string loaded into the layouter.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithFrame:layouter:range:">&ndash;&nbsp;initWithFrame:layouter:range:</a></code>
-		<span class="tooltip"><p>Creates a Layout Frame with the given frame using the attributed string loaded into the layouter.</p></span>
+		<span class="tooltip"><p>Creates a Layout Frame with the given <a href="#//api/name/frame">frame</a> using the attributed string loaded into the layouter.</p></span>
 	</span>
 	
 	
@@ -315,15 +337,15 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/drawInContext:drawImages:">&ndash;&nbsp;drawInContext:drawImages:</a></code>
-		<span class="tooltip"><p>Draws the entire layout frame into the given graphics context.</p></span>
+		<code><a href="#//api/name/drawInContext:drawImages:drawLinks:">&ndash;&nbsp;drawInContext:drawImages:drawLinks:</a></code>
+		<span class="tooltip"><p>Draws the entire layout <a href="#//api/name/frame">frame</a> into the given graphics context.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/textBlockHandler">&nbsp;&nbsp;textBlockHandler</a></code>
-		<span class="tooltip"><p>Set a custom handler to be executed before text belonging to a text block is drawn.</p></span>
+		<span class="tooltip"><p>Set a custom handler to be executed before text belonging to a text block is drawn. Of type <DTCoreTextLayoutFrameTextBlockHandler>.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -345,7 +367,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/frameOfGlyphAtIndex:">&ndash;&nbsp;frameOfGlyphAtIndex:</a></code>
-		<span class="tooltip"><p>Retrieves the frame of the glyph at the given glyph index.</p></span>
+		<span class="tooltip"><p>Retrieves the <a href="#//api/name/frame">frame</a> of the glyph at the given glyph index.</p></span>
 	</span>
 	
 	
@@ -367,14 +389,14 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/linesVisibleInRect:">&ndash;&nbsp;linesVisibleInRect:</a></code>
-		<span class="tooltip"><p>The text lines that are visible inside the given rectangle. Also incomplete lines are included.</p></span>
+		<span class="tooltip"><p>The text <a href="#//api/name/lines">lines</a> that are visible inside the given rectangle. Also incomplete <a href="#//api/name/lines">lines</a> are included.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/linesContainedInRect:">&ndash;&nbsp;linesContainedInRect:</a></code>
-		<span class="tooltip"><p>The text lines that are visible inside the given rectangle. Only fully visible lines are included.</p></span>
+		<span class="tooltip"><p>The text <a href="#//api/name/lines">lines</a> that are visible inside the given rectangle. Only fully visible <a href="#//api/name/lines">lines</a> are included.</p></span>
 	</span>
 	
 	
@@ -424,7 +446,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/textAttachmentsWithPredicate:">&ndash;&nbsp;textAttachmentsWithPredicate:</a></code>
-		<span class="tooltip"><p>The array of all DTTextAttachment instances that belong to the receiver which also match the specified predicate.</p></span>
+		<span class="tooltip"><p>The array of all <a href="../Classes/DTTextAttachment.html">DTTextAttachment</a> instances that belong to the receiver which also match the specified predicate.</p></span>
 	</span>
 	
 	
@@ -453,7 +475,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/linesInParagraphAtIndex:">&ndash;&nbsp;linesInParagraphAtIndex:</a></code>
-		<span class="tooltip"><p>The text lines that belong to the specified paragraph.</p></span>
+		<span class="tooltip"><p>The text <a href="#//api/name/lines">lines</a> that belong to the specified paragraph.</p></span>
 	</span>
 	
 	
@@ -475,9 +497,52 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setShouldDrawDebugFrames:">+&nbsp;setShouldDrawDebugFrames:</a></code>
-		<span class="tooltip"><p>Switches on the debug drawing mode where individual glph runs, baselines, et ceter get individually marked.</p></span>
+		<span class="tooltip"><p>Switches on the debug drawing mode where individual glph runs, base<a href="#//api/name/lines">lines</a>, et ceter get individually marked.</p></span>
 	</span>
 	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldDrawDebugFrames">+&nbsp;shouldDrawDebugFrames</a></code>
+		<span class="tooltip"><p>the current value of the debug <a href="#//api/name/frame">frame</a> drawing</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Truncation" name="task_Truncation"></a>
+						<h3 class="subsubtitle task-title">Truncation</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfLines">&nbsp;&nbsp;numberOfLines</a></code>
+		<span class="tooltip"><p>Maximum number of <a href="#//api/name/lines">lines</a> to display before truncation.  Default is 0 which indicates no limit.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineBreakMode">&nbsp;&nbsp;lineBreakMode</a></code>
+		<span class="tooltip"><p>Line break mode used to indicate how truncation should occur</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/truncationString">&nbsp;&nbsp;truncationString</a></code>
+		<span class="tooltip"><p>Optional attributed string tu use as truncation indicator.  If nil, will use &ldquo;…&rdquo; w/ attributes taken from text being truncated</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/noLeadingOnFirstLine">&nbsp;&nbsp;noLeadingOnFirstLine</a></code>
+		<span class="tooltip"><p>Flag to supress leading whitespace above fist line</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -527,6 +592,40 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/lineBreakMode" title="lineBreakMode"></a>
+	<h3 class="subsubtitle method-title">lineBreakMode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Line break mode used to indicate how truncation should occur</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSLineBreakMode lineBreakMode</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutFrame.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/lines" title="lines"></a>
 	<h3 class="subsubtitle method-title">lines</h3>
 	
@@ -538,6 +637,74 @@
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *lines</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutFrame.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/noLeadingOnFirstLine" title="noLeadingOnFirstLine"></a>
+	<h3 class="subsubtitle method-title">noLeadingOnFirstLine</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Flag to supress leading whitespace above fist line</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL noLeadingOnFirstLine</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutFrame.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfLines" title="numberOfLines"></a>
+	<h3 class="subsubtitle method-title">numberOfLines</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Maximum number of <a href="#//api/name/lines">lines</a> to display before truncation.  Default is 0 which indicates no limit.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSInteger numberOfLines</code></div>
 	
 	
 	
@@ -601,22 +768,46 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Set a custom handler to be executed before text belonging to a text block is drawn.</p>
+		<p>Set a custom handler to be executed before text belonging to a text block is drawn. Of type <DTCoreTextLayoutFrameTextBlockHandler>.</p>
 	</div>		
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) DTCoreTextLayoutFrameTextBlockHandler textBlockHandler</code></div>
 	
 	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>handler</em></dt>
-			<dd><p>A DTCoreTextLayoutFrameTextBlockHandler block.</p></dd>
-		</dl>
-		
-	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutFrame.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/truncationString" title="truncationString"></a>
+	<h3 class="subsubtitle method-title">truncationString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Optional attributed string tu use as truncation indicator.  If nil, will use &ldquo;…&rdquo; w/ attributes taken from text being truncated</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSAttributedString *truncationString</code></div>
+	
 	
 	
 	
@@ -653,7 +844,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Switches on the debug drawing mode where individual glph runs, baselines, et ceter get individually marked.</p>
+		<p>Switches on the debug drawing mode where individual glph runs, base<a href="#//api/name/lines">lines</a>, et ceter get individually marked.</p>
 	</div>		
 	
 	
@@ -671,6 +862,45 @@
 	</div>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutFrame.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldDrawDebugFrames" title="shouldDrawDebugFrames"></a>
+	<h3 class="subsubtitle method-title">shouldDrawDebugFrames</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>the current value of the debug <a href="#//api/name/frame">frame</a> drawing</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (BOOL)shouldDrawDebugFrames</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the current value of the debug <a href="#//api/name/frame">frame</a> drawing</p>
+	</div>
 	
 	
 	
@@ -787,17 +1017,17 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/drawInContext:drawImages:" title="drawInContext:drawImages:"></a>
-	<h3 class="subsubtitle method-title">drawInContext:drawImages:</h3>
+	<a name="//api/name/drawInContext:drawImages:drawLinks:" title="drawInContext:drawImages:drawLinks:"></a>
+	<h3 class="subsubtitle method-title">drawInContext:drawImages:drawLinks:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Draws the entire layout frame into the given graphics context.</p>
+		<p>Draws the entire layout <a href="#//api/name/frame">frame</a> into the given graphics context.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)drawInContext:(CGContextRef)<em>context</em> drawImages:(BOOL)<em>drawImages</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)drawInContext:(CGContextRef)<em>context</em> drawImages:(BOOL)<em>drawImages</em> drawLinks:(BOOL)<em>drawLinks</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -810,7 +1040,12 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>drawImages</em></dt>
-			<dd><p>Whether images should be draw together with the text. If you specify <code>NO</code> then space is left blank where images would go and you have to add your own views to display these images.</p></dd>
+			<dd><p>Whether hyperlinks should be drawn together with the text. If you specify <code>NO</code> then space is left blank where links would go and you have to add your own views to display these links.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>drawLinks</em></dt>
+			<dd><p>Whether hyperlinks should be drawn together with the text. If you specify <code>NO</code> then space is left blank where links would go and you have to add your own views to display these images.</p></dd>
 		</dl>
 		
 	</div>
@@ -842,7 +1077,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Retrieves the frame of the glyph at the given glyph index.</p>
+		<p>Retrieves the <a href="#//api/name/frame">frame</a> of the glyph at the given glyph index.</p>
 	</div>		
 	
 	
@@ -863,7 +1098,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The frame of this glyph</p>
+		<p>The <a href="#//api/name/frame">frame</a> of this glyph</p>
 	</div>
 	
 	
@@ -891,7 +1126,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Creates a Layout Frame with the given frame using the attributed string loaded into the layouter.</p>
+		<p>Creates a Layout Frame with the given <a href="#//api/name/frame">frame</a> using the attributed string loaded into the layouter.</p>
 	</div>		
 	
 	
@@ -940,7 +1175,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Creates a Layout Frame with the given frame using the attributed string loaded into the layouter.</p>
+		<p>Creates a Layout Frame with the given <a href="#//api/name/frame">frame</a> using the attributed string loaded into the layouter.</p>
 	</div>		
 	
 	
@@ -1200,7 +1435,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The text lines that are visible inside the given rectangle. Only fully visible lines are included.</p>
+		<p>The text <a href="#//api/name/lines">lines</a> that are visible inside the given rectangle. Only fully visible <a href="#//api/name/lines">lines</a> are included.</p>
 	</div>		
 	
 	
@@ -1221,7 +1456,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An array, sorted from top to bottom, of lines fully visible</p>
+		<p>An array, sorted from top to bottom, of <a href="#//api/name/lines">lines</a> fully visible</p>
 	</div>
 	
 	
@@ -1249,7 +1484,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The text lines that belong to the specified paragraph.</p>
+		<p>The text <a href="#//api/name/lines">lines</a> that belong to the specified paragraph.</p>
 	</div>		
 	
 	
@@ -1270,7 +1505,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An array, sorted from top to bottom, of lines in this paragraph</p>
+		<p>An array, sorted from top to bottom, of <a href="#//api/name/lines">lines</a> in this paragraph</p>
 	</div>
 	
 	
@@ -1298,7 +1533,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The text lines that are visible inside the given rectangle. Also incomplete lines are included.</p>
+		<p>The text <a href="#//api/name/lines">lines</a> that are visible inside the given rectangle. Also incomplete <a href="#//api/name/lines">lines</a> are included.</p>
 	</div>		
 	
 	
@@ -1319,7 +1554,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An array, sorted from top to bottom, of lines at least partially visible</p>
+		<p>An array, sorted from top to bottom, of <a href="#//api/name/lines">lines</a> at least partially visible</p>
 	</div>
 	
 	
@@ -1518,7 +1753,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The array of all DTTextAttachment instances that belong to the receiver which also match the specified predicate.</p>
+		<p>The array of all <a href="../Classes/DTTextAttachment.html">DTTextAttachment</a> instances that belong to the receiver which also match the specified predicate.</p>
 	</div>		
 	
 	
@@ -1607,9 +1842,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
 					</div>
 				</div>

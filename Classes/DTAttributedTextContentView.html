@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -42,11 +44,7 @@
 	
 	<option value="//api/name/backgroundOffset">&nbsp;&nbsp;&nbsp;&nbsp;backgroundOffset</option>
 	
-	<option value="//api/name/customViews">&nbsp;&nbsp;&nbsp;&nbsp;customViews</option>
-	
 	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
-	
-	<option value="//api/name/drawDebugFrames">&nbsp;&nbsp;&nbsp;&nbsp;drawDebugFrames</option>
 	
 	<option value="//api/name/edgeInsets">&nbsp;&nbsp;&nbsp;&nbsp;edgeInsets</option>
 	
@@ -54,11 +52,15 @@
 	
 	<option value="//api/name/layoutOffset">&nbsp;&nbsp;&nbsp;&nbsp;layoutOffset</option>
 	
+	<option value="//api/name/layoutQueue">&nbsp;&nbsp;&nbsp;&nbsp;layoutQueue</option>
+	
 	<option value="//api/name/layouter">&nbsp;&nbsp;&nbsp;&nbsp;layouter</option>
 	
-	<option value="//api/name/selfLock">&nbsp;&nbsp;&nbsp;&nbsp;selfLock</option>
+	<option value="//api/name/relayoutMask">&nbsp;&nbsp;&nbsp;&nbsp;relayoutMask</option>
 	
 	<option value="//api/name/shouldDrawImages">&nbsp;&nbsp;&nbsp;&nbsp;shouldDrawImages</option>
+	
+	<option value="//api/name/shouldDrawLinks">&nbsp;&nbsp;&nbsp;&nbsp;shouldDrawLinks</option>
 	
 	<option value="//api/name/shouldLayoutCustomSubviews">&nbsp;&nbsp;&nbsp;&nbsp;shouldLayoutCustomSubviews</option>
 	
@@ -76,9 +78,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/attributedStringSizeThatFits:">&nbsp;&nbsp;&nbsp;&nbsp;- attributedStringSizeThatFits:</option>
-	
-	<option value="//api/name/initWithAttributedString:width:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAttributedString:width:</option>
+	<option value="//api/name/intrinsicContentSize">&nbsp;&nbsp;&nbsp;&nbsp;- intrinsicContentSize</option>
 	
 	<option value="//api/name/layoutSubviewsInRect:">&nbsp;&nbsp;&nbsp;&nbsp;- layoutSubviewsInRect:</option>
 	
@@ -99,10 +99,22 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Sizing">Sizing</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Layouting">Layouting</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Working with Custom Subviews">Working with Custom Subviews</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Providing Content">Providing Content</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Customizing Content Display">Customizing Content Display</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Tiling Methods">Tiling Methods</a></span></li>
 	
@@ -118,11 +130,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/backgroundOffset">backgroundOffset</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/customViews">customViews</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawDebugFrames">drawDebugFrames</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/edgeInsets">edgeInsets</a></span></li>
 	
@@ -130,11 +138,15 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/layoutOffset">layoutOffset</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/layoutQueue">layoutQueue</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/layouter">layouter</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selfLock">selfLock</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/relayoutMask">relayoutMask</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldDrawImages">shouldDrawImages</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldDrawLinks">shouldDrawLinks</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldLayoutCustomSubviews">shouldLayoutCustomSubviews</a></span></li>
 	
@@ -154,9 +166,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributedStringSizeThatFits:">attributedStringSizeThatFits:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAttributedString:width:">initWithAttributedString:width:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/intrinsicContentSize">intrinsicContentSize</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/layoutSubviewsInRect:">layoutSubviewsInRect:</a></span></li>
 	
@@ -202,6 +212,26 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Attributed Text Content Views display attributed strings generated by <a href="../Classes/DTHTMLAttributedStringBuilder.html">DTHTMLAttributedStringBuilder</a>. They can display images and hyperlinks inline or optionally place custom subviews (which get provided via the <a href="#//api/name/delegate">delegate</a> in the appropriate places. By itself content views do not scroll, for that there is the <code>UIScrollView</code> subclass <a href="../Classes/DTAttributedTextView.html">DTAttributedTextView</a>.</p>
+
+<p>Generally you have two options to providing content:</p>
+
+<ul>
+<li>set the attributed string</li>
+<li>set a layout frame</li>
+</ul>
+
+
+<p>The first you would normally use, the second you would use if you are layouting a larger text and then simply want to display individual parts (e.g. pages from an e-book) in a content view.</p>
+
+<p>You can globally customize the layer class to be used for new instances of <DTAttributedTextContentView>. By itself it makes most sense to go with the default <code>CALayer</code>. For larger bodies of text, i.e. if there is scrolling then you should use a <code>CATiledLayer</code> subclass instead.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -209,140 +239,165 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						<h3 class="subsubtitle task-title">Other Methods</h3>
+						<a title="Sizing" name="task_Sizing"></a>
+						<h3 class="subsubtitle task-title">Sizing</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithAttributedString:width:">&ndash;&nbsp;initWithAttributedString:width:</a></code>
-		
+		<code><a href="#//api/name/suggestedFrameSizeToFitEntireStringConstraintedToWidth:">&ndash;&nbsp;suggestedFrameSizeToFitEntireStringConstraintedToWidth:</a></code>
+		<span class="tooltip"><p>Calculates the suggested frame size that would fit the entire <a href="#//api/name/attributedString">attributedString</a> with a maximum width.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/layoutSubviewsInRect:">&ndash;&nbsp;layoutSubviewsInRect:</a></code>
-		
+		<code><a href="#//api/name/intrinsicContentSize">&ndash;&nbsp;intrinsicContentSize</a></code>
+		<span class="tooltip"><p>The size of contents of the receiver. This is possibly used by auto-layout, but also for example if you want to get the size of the receiver necessary for a scroll view</p></span>
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Layouting" name="task_Layouting"></a>
+						<h3 class="subsubtitle task-title">Layouting</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/relayoutText">&ndash;&nbsp;relayoutText</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/removeAllCustomViews">&ndash;&nbsp;removeAllCustomViews</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/removeAllCustomViewsForLinks">&ndash;&nbsp;removeAllCustomViewsForLinks</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/attributedStringSizeThatFits:">&ndash;&nbsp;attributedStringSizeThatFits:</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/suggestedFrameSizeToFitEntireStringConstraintedToWidth:">&ndash;&nbsp;suggestedFrameSizeToFitEntireStringConstraintedToWidth:</a></code>
-		
+		<span class="tooltip"><p>Discards the current <a href="#//api/name/layoutFrame">layoutFrame</a> and creates a new one based on the <a href="#//api/name/attributedString">attributedString</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/layouter">&nbsp;&nbsp;layouter</a></code>
-		
+		<span class="tooltip"><p>The layouter to use for the receiver. Created by default.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/layoutFrame">&nbsp;&nbsp;layoutFrame</a></code>
-		
+		<span class="tooltip"><p>The layout frame to use for the receiver. Created by default.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/customViews">&nbsp;&nbsp;customViews</a></code>
-		
+		<code><a href="#//api/name/layoutQueue">&nbsp;&nbsp;layoutQueue</a></code>
+		<span class="tooltip"><p>The dispatch queue that is used to serialize layouting actions</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
+</li>
+						</ul>
+						
+						
+						<a title="Working with Custom Subviews" name="task_Working with Custom Subviews"></a>
+						<h3 class="subsubtitle task-title">Working with Custom Subviews</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAllCustomViews">&ndash;&nbsp;removeAllCustomViews</a></code>
+		<span class="tooltip"><p>Removes all custom subviews (excluding views representing links) from the receiver.</p></span>
+	</span>
+	
+	
 </li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAllCustomViewsForLinks">&ndash;&nbsp;removeAllCustomViewsForLinks</a></code>
+		<span class="tooltip"><p>Removes all custom subviews representing links from the receiver</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/layoutSubviewsInRect:">&ndash;&nbsp;layoutSubviewsInRect:</a></code>
+		<span class="tooltip"><p>Removes invisible custom subviews and lays out subviews visible in the given rectangle</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Providing Content" name="task_Providing Content"></a>
+						<h3 class="subsubtitle task-title">Providing Content</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/attributedString">&nbsp;&nbsp;attributedString</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/edgeInsets">&nbsp;&nbsp;edgeInsets</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/drawDebugFrames">&nbsp;&nbsp;drawDebugFrames</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/shouldDrawImages">&nbsp;&nbsp;shouldDrawImages</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/shouldLayoutCustomSubviews">&nbsp;&nbsp;shouldLayoutCustomSubviews</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/layoutOffset">&nbsp;&nbsp;layoutOffset</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/backgroundOffset">&nbsp;&nbsp;backgroundOffset</a></code>
-		
+		<span class="tooltip"><p>The attributed string to display in the receiver</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
-		
+		<span class="tooltip"><p>The delegate that is in charge of supplying custom behavior for the receiver. It must conform to <a href="../Protocols/DTAttributedTextContentViewDelegate.html">DTAttributedTextContentViewDelegate</a> and provide custom subviews, link buttons, etc.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Customizing Content Display" name="task_Customizing Content Display"></a>
+						<h3 class="subsubtitle task-title">Customizing Content Display</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/edgeInsets">&nbsp;&nbsp;edgeInsets</a></code>
+		<span class="tooltip"><p>The insets to apply around the text content</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/selfLock">&nbsp;&nbsp;selfLock</a></code>
-		
+		<code><a href="#//api/name/shouldDrawImages">&nbsp;&nbsp;shouldDrawImages</a></code>
+		<span class="tooltip"><p>Specifies if the receiver should draw image text attachments.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldDrawLinks">&nbsp;&nbsp;shouldDrawLinks</a></code>
+		<span class="tooltip"><p>Specified if the receiver should draw hyperlinks.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldLayoutCustomSubviews">&nbsp;&nbsp;shouldLayoutCustomSubviews</a></code>
+		<span class="tooltip"><p>Specifies if the receiver should layout custom subviews in layoutSubviews.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/layoutOffset">&nbsp;&nbsp;layoutOffset</a></code>
+		<span class="tooltip"><p>The amount by which all contents of the receiver will offset of display and subview layouting</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/backgroundOffset">&nbsp;&nbsp;backgroundOffset</a></code>
+		<span class="tooltip"><p>The offset to apply for drawing the background.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/relayoutMask">&nbsp;&nbsp;relayoutMask</a></code>
+		<span class="tooltip"><p>An integer bit mask that determines how the receiver relayouts its contents when its bounds change.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -357,14 +412,14 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setLayerClass:">+&nbsp;setLayerClass:</a></code>
-		
+		<span class="tooltip"><p>Sets the layer class globally to use in new instances of content views. Defaults to <code>CALayer</code>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/layerClass">+&nbsp;layerClass</a></code>
-		
+		<span class="tooltip"><p>The current layer class that is used for new instances</p></span>
 	</span>
 	
 	
@@ -386,6 +441,33 @@
 	<h3 class="subsubtitle method-title">attributedString</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The attributed string to display in the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSAttributedString *attributedString</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -393,11 +475,36 @@
 	<h3 class="subsubtitle method-title">backgroundOffset</h3>
 	
 	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/customViews" title="customViews"></a>
-	<h3 class="subsubtitle method-title">customViews</h3>
+	
+	<div class="method-subsection brief-description">
+		<p>The offset to apply for drawing the background.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CGSize backgroundOffset</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If you set a pattern color as background color you can have the pattern phase be offset by this value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -407,11 +514,31 @@
 	<h3 class="subsubtitle method-title">delegate</h3>
 	
 	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/drawDebugFrames" title="drawDebugFrames"></a>
-	<h3 class="subsubtitle method-title">drawDebugFrames</h3>
+	
+	<div class="method-subsection brief-description">
+		<p>The delegate that is in charge of supplying custom behavior for the receiver. It must conform to <a href="../Protocols/DTAttributedTextContentViewDelegate.html">DTAttributedTextContentViewDelegate</a> and provide custom subviews, link buttons, etc.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IBOutlet id&lt;DTAttributedTextContentViewDelegate&gt; delegate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -421,11 +548,70 @@
 	<h3 class="subsubtitle method-title">edgeInsets</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The insets to apply around the text content</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) UIEdgeInsets edgeInsets</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/layoutFrame" title="layoutFrame"></a>
 	<h3 class="subsubtitle method-title">layoutFrame</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The layout frame to use for the receiver. Created by default.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (atomic, strong) DTCoreTextLayoutFrame *layoutFrame</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A layout frame is basically one rectangle, inset by the <a href="#//api/name/edgeInsets">edgeInsets</a>. By default this is automatically generated for the current <a href="#//api/name/attributedString">attributedString</a>. You can also create a <a href="../Classes/DTCoreTextLayoutFrame.html">DTCoreTextLayoutFrame</a> seperately and set this property to display the layout frame. This is usedful for example if you layout entire e-book and then set the <layoutFrame> for displaying individual pages.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -435,6 +621,67 @@
 	<h3 class="subsubtitle method-title">layoutOffset</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The amount by which all contents of the receiver will offset of display and subview layouting</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CGPoint layoutOffset</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/layoutQueue" title="layoutQueue"></a>
+	<h3 class="subsubtitle method-title">layoutQueue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The dispatch queue that is used to serialize layouting actions</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) dispatch_queue_t layoutQueue</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -442,11 +689,75 @@
 	<h3 class="subsubtitle method-title">layouter</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The layouter to use for the receiver. Created by default.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (atomic, strong) DTCoreTextLayouter *layouter</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>By default this is generated automatically for the current <a href="#//api/name/attributedString">attributedString</a>. You can also supply your own if you require special layouting behavior.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/selfLock" title="selfLock"></a>
-	<h3 class="subsubtitle method-title">selfLock</h3>
+	<a name="//api/name/relayoutMask" title="relayoutMask"></a>
+	<h3 class="subsubtitle method-title">relayoutMask</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An integer bit mask that determines how the receiver relayouts its contents when its bounds change.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) DTAttributedTextContentViewRelayoutMask relayoutMask</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>When the view’s bounds change, that view automatically re-layouts its text according to the relayout mask. You specify the value of this mask by combining the constants described in DTAttributedTextContentViewRelayoutMask using the C bitwise OR operator. Combining these constants lets you specify which dimensions will cause a re-layout if modified. The default value of this property is DTAttributedTextContentViewRelayoutOnWidthChanged, which indicates that the text will be re-layouted if the width changes, but not if the height changes.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -456,11 +767,114 @@
 	<h3 class="subsubtitle method-title">shouldDrawImages</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies if the receiver should draw image text attachments.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL shouldDrawImages</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Set to <code>NO</code> if you use the <a href="#//api/name/delegate">delegate</a> methods to provide custom subviews to display images.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldDrawLinks" title="shouldDrawLinks"></a>
+	<h3 class="subsubtitle method-title">shouldDrawLinks</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specified if the receiver should draw hyperlinks.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL shouldDrawLinks</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If set to <code>NO</code> then your custom subview/button for hyperlinks is responsible for displaying hyperlinks. You can use <a href="../Classes/DTLinkButton.html">DTLinkButton</a> to have links show a differently for normal and highlighted style</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/shouldLayoutCustomSubviews" title="shouldLayoutCustomSubviews"></a>
 	<h3 class="subsubtitle method-title">shouldLayoutCustomSubviews</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies if the receiver should layout custom subviews in layoutSubviews.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL shouldLayoutCustomSubviews</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If set to <code>YES</code> then all custom subviews will always be layouted. Set to <code>NO</code> to only layout visible subviews, e.g. in a scroll view. Defaults to <code>YES</code> if used stand-alone, <code>NO</code> inside a <a href="../Classes/DTAttributedTextView.html">DTAttributedTextView</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -478,11 +892,85 @@
 	<h3 class="subsubtitle method-title">layerClass</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The current layer class that is used for new instances</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (Class)layerClass</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <code>CALayer</code> subclass that new instances are using</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/setLayerClass:" title="setLayerClass:"></a>
 	<h3 class="subsubtitle method-title">setLayerClass:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the layer class globally to use in new instances of content views. Defaults to <code>CALayer</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)setLayerClass:(Class)<em>layerClass</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>layerClass</em></dt>
+			<dd><p>The class to use, should be a <code>CALayer</code> subclass</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>While being fine for most use cases you should use a <code>CATiledLayer</code> subclass for anything larger than a screen full, e.g. in scroll views.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -496,15 +984,40 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/attributedStringSizeThatFits:" title="attributedStringSizeThatFits:"></a>
-	<h3 class="subsubtitle method-title">attributedStringSizeThatFits:</h3>
+	<a name="//api/name/intrinsicContentSize" title="intrinsicContentSize"></a>
+	<h3 class="subsubtitle method-title">intrinsicContentSize</h3>
 	
 	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/initWithAttributedString:width:" title="initWithAttributedString:width:"></a>
-	<h3 class="subsubtitle method-title">initWithAttributedString:width:</h3>
+	
+	<div class="method-subsection brief-description">
+		<p>The size of contents of the receiver. This is possibly used by auto-layout, but also for example if you want to get the size of the receiver necessary for a scroll view</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGSize)intrinsicContentSize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is defined as of iOS 6, but to support earlier OS versions</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -514,11 +1027,75 @@
 	<h3 class="subsubtitle method-title">layoutSubviewsInRect:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes invisible custom subviews and lays out subviews visible in the given rectangle</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)layoutSubviewsInRect:(CGRect)<em>rect</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rect</em></dt>
+			<dd><p>The bounds of the visible area to layout custom subviews in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/relayoutText" title="relayoutText"></a>
 	<h3 class="subsubtitle method-title">relayoutText</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Discards the current <a href="#//api/name/layoutFrame">layoutFrame</a> and creates a new one based on the <a href="#//api/name/attributedString">attributedString</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)relayoutText</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -528,6 +1105,33 @@
 	<h3 class="subsubtitle method-title">removeAllCustomViews</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes all custom subviews (excluding views representing links) from the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeAllCustomViews</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -535,11 +1139,87 @@
 	<h3 class="subsubtitle method-title">removeAllCustomViewsForLinks</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes all custom subviews representing links from the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeAllCustomViewsForLinks</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/suggestedFrameSizeToFitEntireStringConstraintedToWidth:" title="suggestedFrameSizeToFitEntireStringConstraintedToWidth:"></a>
 	<h3 class="subsubtitle method-title">suggestedFrameSizeToFitEntireStringConstraintedToWidth:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the suggested frame size that would fit the entire <a href="#//api/name/attributedString">attributedString</a> with a maximum width.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGSize)suggestedFrameSizeToFitEntireStringConstraintedToWidth:(CGFloat)<em>width</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>width</em></dt>
+			<dd><p>The maximum width to layout for</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The suggested frame size</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This does a full layout pass that is cached in <a href="../Classes/DTCoreTextLayouter.html">DTCoreTextLayouter</a>. If you specify a frame that fits the result from this method then the resulting <a href="#//api/name/layoutFrame">layoutFrame</a> is reused.</p>
+
+<p>Since this obeys the <a href="#//api/name/edgeInsets">edgeInsets</a> you have to add these to the final frame size.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -557,9 +1237,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
 					</div>
 				</div>

@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -44,13 +44,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/CSSpixelSize">&nbsp;&nbsp;&nbsp;&nbsp;- CSSpixelSize</option>
-	
 	<option value="//api/name/arrayOfCSSShadowsWithCurrentTextSize:currentColor:">&nbsp;&nbsp;&nbsp;&nbsp;- arrayOfCSSShadowsWithCurrentTextSize:currentColor:</option>
 	
 	<option value="//api/name/dictionaryOfCSSStyles">&nbsp;&nbsp;&nbsp;&nbsp;- dictionaryOfCSSStyles</option>
 	
-	<option value="//api/name/pixelSizeOfCSSMeasureRelativeToCurrentTextSize:">&nbsp;&nbsp;&nbsp;&nbsp;- pixelSizeOfCSSMeasureRelativeToCurrentTextSize:</option>
+	<option value="//api/name/pixelSizeOfCSSMeasureRelativeToCurrentTextSize:textScale:">&nbsp;&nbsp;&nbsp;&nbsp;- pixelSizeOfCSSMeasureRelativeToCurrentTextSize:textScale:</option>
 	
 	<option value="//api/name/stringByDecodingCSSContentAttribute">&nbsp;&nbsp;&nbsp;&nbsp;- stringByDecodingCSSContentAttribute</option>
 	
@@ -82,13 +80,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/CSSpixelSize">CSSpixelSize</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/arrayOfCSSShadowsWithCurrentTextSize:currentColor:">arrayOfCSSShadowsWithCurrentTextSize:currentColor:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dictionaryOfCSSStyles">dictionaryOfCSSStyles</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pixelSizeOfCSSMeasureRelativeToCurrentTextSize:">pixelSizeOfCSSMeasureRelativeToCurrentTextSize:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pixelSizeOfCSSMeasureRelativeToCurrentTextSize:textScale:">pixelSizeOfCSSMeasureRelativeToCurrentTextSize:textScale:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByDecodingCSSContentAttribute">stringByDecodingCSSContentAttribute</a></span></li>
 	
@@ -151,22 +147,15 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/pixelSizeOfCSSMeasureRelativeToCurrentTextSize:">&ndash;&nbsp;pixelSizeOfCSSMeasureRelativeToCurrentTextSize:</a></code>
-		<span class="tooltip"><p>Takes a textSize and modifies the current string&rsquo;s pixel measurement to be modified by it. Used in DTHTMLElement.</p></span>
+		<code><a href="#//api/name/pixelSizeOfCSSMeasureRelativeToCurrentTextSize:textScale:">&ndash;&nbsp;pixelSizeOfCSSMeasureRelativeToCurrentTextSize:textScale:</a></code>
+		<span class="tooltip"><p>Calculates a pixel-based length from the receiver based on the current text size in pixels. Used in <a href="../Classes/DTHTMLElement.html">DTHTMLElement</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/arrayOfCSSShadowsWithCurrentTextSize:currentColor:">&ndash;&nbsp;arrayOfCSSShadowsWithCurrentTextSize:currentColor:</a></code>
-		<span class="tooltip"><p>Parse CSS shadow styles, consisting of color, blur, and offset, out of this string. The input string must be comma delimited in the format: <length> <length> <length>? <color>? where the third length and the color are not required per CSS shadows. To calculate the sizes of the blur and offset pixelSizeOfCSSMeasureRelativeToCurrentTextSize is used. Used in DTHTMLElement.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/CSSpixelSize">&ndash;&nbsp;CSSpixelSize</a></code>
-		<span class="tooltip"><p>If this string ends with &lsquo;px&rsquo; return the float value stored therein. Ex: The following &lsquo;17.0px;&rsquo; will return 17.0. I DON&rsquo;T KNOW WHAT USES THIS METHOD IF ANYTHING AT ALL-grep returned just this class</p></span>
+		<span class="tooltip"><p>Parse CSS shadow styles, consisting of color, blur, and offset, out of this string. The input string must be comma delimited in the format: <length> <length> <length>? <color>? where the third length and the color are not required per CSS shadows. To calculate the sizes of the blur and offset pixelSizeOfCSSMeasureRelativeToCurrentTextSize is used. Used in <a href="../Classes/DTHTMLElement.html">DTHTMLElement</a>.</p></span>
 	</span>
 	
 	
@@ -195,52 +184,13 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/CSSpixelSize" title="CSSpixelSize"></a>
-	<h3 class="subsubtitle method-title">CSSpixelSize</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>If this string ends with &lsquo;px&rsquo; return the float value stored therein. Ex: The following &lsquo;17.0px;&rsquo; will return 17.0. I DON&rsquo;T KNOW WHAT USES THIS METHOD IF ANYTHING AT ALL-grep returned just this class</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>- (CGFloat)CSSpixelSize</code></div>
-	
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The float value stored in this string.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSString+CSS.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/arrayOfCSSShadowsWithCurrentTextSize:currentColor:" title="arrayOfCSSShadowsWithCurrentTextSize:currentColor:"></a>
 	<h3 class="subsubtitle method-title">arrayOfCSSShadowsWithCurrentTextSize:currentColor:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Parse CSS shadow styles, consisting of color, blur, and offset, out of this string. The input string must be comma delimited in the format: <length> <length> <length>? <color>? where the third length and the color are not required per CSS shadows. To calculate the sizes of the blur and offset pixelSizeOfCSSMeasureRelativeToCurrentTextSize is used. Used in DTHTMLElement.</p>
+		<p>Parse CSS shadow styles, consisting of color, blur, and offset, out of this string. The input string must be comma delimited in the format: <length> <length> <length>? <color>? where the third length and the color are not required per CSS shadows. To calculate the sizes of the blur and offset pixelSizeOfCSSMeasureRelativeToCurrentTextSize is used. Used in <a href="../Classes/DTHTMLElement.html">DTHTMLElement</a>.</p>
 	</div>		
 	
 	
@@ -327,17 +277,17 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/pixelSizeOfCSSMeasureRelativeToCurrentTextSize:" title="pixelSizeOfCSSMeasureRelativeToCurrentTextSize:"></a>
-	<h3 class="subsubtitle method-title">pixelSizeOfCSSMeasureRelativeToCurrentTextSize:</h3>
+	<a name="//api/name/pixelSizeOfCSSMeasureRelativeToCurrentTextSize:textScale:" title="pixelSizeOfCSSMeasureRelativeToCurrentTextSize:textScale:"></a>
+	<h3 class="subsubtitle method-title">pixelSizeOfCSSMeasureRelativeToCurrentTextSize:textScale:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Takes a textSize and modifies the current string&rsquo;s pixel measurement to be modified by it. Used in DTHTMLElement.</p>
+		<p>Calculates a pixel-based length from the receiver based on the current text size in pixels. Used in <a href="../Classes/DTHTMLElement.html">DTHTMLElement</a>.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (CGFloat)pixelSizeOfCSSMeasureRelativeToCurrentTextSize:(CGFloat)<em>textSize</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (CGFloat)pixelSizeOfCSSMeasureRelativeToCurrentTextSize:(CGFloat)<em>textSize</em> textScale:(CGFloat)<em>textScale</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -348,13 +298,18 @@
 			<dd><p>The current size which the CSS size is relative to.</p></dd>
 		</dl>
 		
+		<dl class="argument-def parameter-def">
+			<dt><em>textScale</em></dt>
+			<dd><p>The factor by which absolute sizes are scaled. Set to 1.0f to keep the original value.</p></dd>
+		</dl>
+		
 	</div>
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A float that is the size textSize be it %, em or just numbers .</p>
+		<p>A float that is the textSize</p>
 	</div>
 	
 	
@@ -422,9 +377,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
 					</div>
 				</div>

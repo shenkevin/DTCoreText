@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -40,11 +40,6 @@
 	
 	
 	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/guid">&nbsp;&nbsp;&nbsp;&nbsp;+ guid</option>
-	
-	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
@@ -55,9 +50,13 @@
 	
 	<option value="//api/name/integerValueFromHex">&nbsp;&nbsp;&nbsp;&nbsp;- integerValueFromHex</option>
 	
+	<option value="//api/name/isIgnorableWhitespace">&nbsp;&nbsp;&nbsp;&nbsp;- isIgnorableWhitespace</option>
+	
 	<option value="//api/name/isNumeric">&nbsp;&nbsp;&nbsp;&nbsp;- isNumeric</option>
 	
 	<option value="//api/name/percentValue">&nbsp;&nbsp;&nbsp;&nbsp;- percentValue</option>
+	
+	<option value="//api/name/stringByAddingAppleConvertedSpace">&nbsp;&nbsp;&nbsp;&nbsp;- stringByAddingAppleConvertedSpace</option>
 	
 	<option value="//api/name/stringByAddingHTMLEntities">&nbsp;&nbsp;&nbsp;&nbsp;- stringByAddingHTMLEntities</option>
 	
@@ -89,12 +88,6 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/guid">guid</a></span></li>
-	
-</ul></li>
-
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
@@ -105,9 +98,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/integerValueFromHex">integerValueFromHex</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isIgnorableWhitespace">isIgnorableWhitespace</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isNumeric">isNumeric</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/percentValue">percentValue</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByAddingAppleConvertedSpace">stringByAddingAppleConvertedSpace</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByAddingHTMLEntities">stringByAddingHTMLEntities</a></span></li>
 	
@@ -181,6 +178,13 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/isIgnorableWhitespace">&ndash;&nbsp;isIgnorableWhitespace</a></code>
+		<span class="tooltip"><p>Test whether the entire receiver consists of only whitespace characters.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/percentValue">&ndash;&nbsp;percentValue</a></code>
 		<span class="tooltip"><p>Read through this string and store the numbers included, then divide them by 100 giving a percentage.</p></span>
 	</span>
@@ -223,8 +227,8 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/guid">+&nbsp;guid</a></code>
-		<span class="tooltip"><p>Create a globally unique identifier to uniquely identify something. Used to create a GUID, store it in a dictionary or other data structure and retrieve it to uniquely identifiy something. In DTLinkButton multiple parts of the same hyperlink synchronize their looks through the GUID.</p></span>
+		<code><a href="#//api/name/stringByAddingAppleConvertedSpace">&ndash;&nbsp;stringByAddingAppleConvertedSpace</a></code>
+		<span class="tooltip"><p>Replaces occurences of more two or more spaces with a range of alternating non-breaking space and regular space. It also encloses these parts with a span of class &lsquo;Apple-converted-space&rsquo;</p></span>
 	</span>
 	
 	
@@ -238,51 +242,6 @@
 					
 					
 					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/guid" title="guid"></a>
-	<h3 class="subsubtitle method-title">guid</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Create a globally unique identifier to uniquely identify something. Used to create a GUID, store it in a dictionary or other data structure and retrieve it to uniquely identifiy something. In DTLinkButton multiple parts of the same hyperlink synchronize their looks through the GUID.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>+ (NSString *)guid</code></div>
-	
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>GUID assigned to this string to easily and uniquely identify it..</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSString+HTML.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
 					
 					
 					
@@ -428,6 +387,45 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/isIgnorableWhitespace" title="isIgnorableWhitespace"></a>
+	<h3 class="subsubtitle method-title">isIgnorableWhitespace</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Test whether the entire receiver consists of only whitespace characters.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)isIgnorableWhitespace</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the receiver only has whitespace and newline characters</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/isNumeric" title="isNumeric"></a>
 	<h3 class="subsubtitle method-title">isNumeric</h3>
 	
@@ -486,6 +484,40 @@
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>The numbers contained in this string, as a percentage.</p>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByAddingAppleConvertedSpace" title="stringByAddingAppleConvertedSpace"></a>
+	<h3 class="subsubtitle method-title">stringByAddingAppleConvertedSpace</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Replaces occurences of more two or more spaces with a range of alternating non-breaking space and regular space. It also encloses these parts with a span of class &lsquo;Apple-converted-space&rsquo;</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByAddingAppleConvertedSpace</code></div>
+	
+	
+	
 	
 	
 	
@@ -635,9 +667,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
 					</div>
 				</div>

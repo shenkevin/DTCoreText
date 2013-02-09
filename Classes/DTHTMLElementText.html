@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>NSMutableString(HTML) Category Reference</title>
+		<title>DTHTMLElementText Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">NSMutableString(HTML) Category Reference</h1>
+				<h1 class="hideInXcode">DTHTMLElementText Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -38,13 +38,13 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/text">&nbsp;&nbsp;&nbsp;&nbsp;text</option>
 	
 	
 	
 	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/removeTrailingWhitespace">&nbsp;&nbsp;&nbsp;&nbsp;- removeTrailingWhitespace</option>
 	
 	
 	
@@ -68,22 +68,22 @@
 
 
 
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeTrailingWhitespace">removeTrailingWhitespace</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/text">text</a></span></li>
 	
 </ul></li>
+
+
+
+
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="NSMutableString(HTML) Category Reference" name="top"></a>
+				<a title="DTHTMLElementText Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -92,15 +92,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">NSMutableString(HTML) Category Reference</h1>
+						<h1 class="title title-header">DTHTMLElementText Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/DTHTMLElement.html">DTHTMLElement</a> : <a href="../Classes/DTHTMLParserNode.html">DTHTMLParserNode</a> : NSObject</td>
+</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">NSMutableString+HTML.h</td>
+	<td class="specification-value">DTHTMLElementText.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,7 +113,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Categories needed for modifying mutable strings, as needed for DTCoreText.</p>
+						<p>Specialized subclass of <a href="../Classes/DTHTMLElement.html">DTHTMLElement</a> that deals with <a href="#//api/name/text">text</a>.</p>
 					</div>
 					
 					
@@ -128,10 +131,10 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/removeTrailingWhitespace">&ndash;&nbsp;removeTrailingWhitespace</a></code>
-		<span class="tooltip"><p>Removes the trailing whitespace from the receiver.</p></span>
+		<code><a href="#//api/name/text">&nbsp;&nbsp;text</a></code>
+		<span class="tooltip"><p>The text content of the element.</p></span>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -142,26 +145,22 @@
 					
 					
 					
-					
-					
-					
-					
 					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/removeTrailingWhitespace" title="removeTrailingWhitespace"></a>
-	<h3 class="subsubtitle method-title">removeTrailingWhitespace</h3>
+	<a name="//api/name/text" title="text"></a>
+	<h3 class="subsubtitle method-title">text</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Removes the trailing whitespace from the receiver.</p>
+		<p>The text content of the element.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)removeTrailingWhitespace</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *text</code></div>
 	
 	
 	
@@ -178,13 +177,17 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSMutableString+HTML.h</code><br />
+		<code class="declared-in-ref">DTHTMLElementText.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
+					
+					
+					
+					
 					
 					
 				</div>

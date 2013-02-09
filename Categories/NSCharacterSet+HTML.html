@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -43,6 +43,8 @@
 	<option value="class_methods">Class Methods</option>
 	
 	<option value="//api/name/cssStyleAttributeNameCharacterSet">&nbsp;&nbsp;&nbsp;&nbsp;+ cssStyleAttributeNameCharacterSet</option>
+	
+	<option value="//api/name/ignorableWhitespaceCharacterSet">&nbsp;&nbsp;&nbsp;&nbsp;+ ignorableWhitespaceCharacterSet</option>
 	
 	<option value="//api/name/nonQuotedAttributeEndCharacterSet">&nbsp;&nbsp;&nbsp;&nbsp;+ nonQuotedAttributeEndCharacterSet</option>
 	
@@ -81,6 +83,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cssStyleAttributeNameCharacterSet">cssStyleAttributeNameCharacterSet</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ignorableWhitespaceCharacterSet">ignorableWhitespaceCharacterSet</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nonQuotedAttributeEndCharacterSet">nonQuotedAttributeEndCharacterSet</a></span></li>
 	
@@ -152,7 +156,14 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/tagAttributeNameCharacterSet">+&nbsp;tagAttributeNameCharacterSet</a></code>
-		<span class="tooltip"><p>Creates an alpha-numeric character set just as tagNameCharacterSet does but also with colon, dash, and underscore characters, appropriate for tag attribute names.</p></span>
+		<span class="tooltip"><p>Creates an alpha-numeric character set just as <a href="#//api/name/tagNameCharacterSet">tagNameCharacterSet</a> does but also with colon, dash, and underscore characters, appropriate for tag attribute names.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ignorableWhitespaceCharacterSet">+&nbsp;ignorableWhitespaceCharacterSet</a></code>
+		<span class="tooltip"><p>Creates a characterset of all whitespace and newline characters that can be ignored between HTML tags</p></span>
 	</span>
 	
 	
@@ -173,7 +184,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/cssStyleAttributeNameCharacterSet">+&nbsp;cssStyleAttributeNameCharacterSet</a></code>
-		<span class="tooltip"><p>Creates an alpha-numeric character set just as tagNameCharacterSet does but also with the dash and underscore characters. Does not contain the colon character because it will mess up parsing of CSS style attributes. Useful for CSS attribute names.</p></span>
+		<span class="tooltip"><p>Creates an alpha-numeric character set just as <a href="#//api/name/tagNameCharacterSet">tagNameCharacterSet</a> does but also with the dash and underscore characters. Does not contain the colon character because it will mess up parsing of CSS style attributes. Useful for CSS attribute names.</p></span>
 	</span>
 	
 	
@@ -199,7 +210,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Creates an alpha-numeric character set just as tagNameCharacterSet does but also with the dash and underscore characters. Does not contain the colon character because it will mess up parsing of CSS style attributes. Useful for CSS attribute names.</p>
+		<p>Creates an alpha-numeric character set just as <a href="#//api/name/tagNameCharacterSet">tagNameCharacterSet</a> does but also with the dash and underscore characters. Does not contain the colon character because it will mess up parsing of CSS style attributes. Useful for CSS attribute names.</p>
 	</div>		
 	
 	
@@ -211,6 +222,45 @@
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>An NSCharacterSet with alpha-numeric characters, dash, and underscore characters.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSCharacterSet+HTML.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/ignorableWhitespaceCharacterSet" title="ignorableWhitespaceCharacterSet"></a>
+	<h3 class="subsubtitle method-title">ignorableWhitespaceCharacterSet</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a characterset of all whitespace and newline characters that can be ignored between HTML tags</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSCharacterSet *)ignorableWhitespaceCharacterSet</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSCharacterSet of ignorable characters</p>
 	</div>
 	
 	
@@ -316,7 +366,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Creates an alpha-numeric character set just as tagNameCharacterSet does but also with colon, dash, and underscore characters, appropriate for tag attribute names.</p>
+		<p>Creates an alpha-numeric character set just as <a href="#//api/name/tagNameCharacterSet">tagNameCharacterSet</a> does but also with colon, dash, and underscore characters, appropriate for tag attribute names.</p>
 	</div>		
 	
 	
@@ -402,9 +452,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
 					</div>
 				</div>
