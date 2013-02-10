@@ -139,21 +139,21 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/rangeOfParagraphsContainingRange:parBegIndex:parEndIndex:">&ndash;&nbsp;rangeOfParagraphsContainingRange:parBegIndex:parEndIndex:</a></code>
-		
+		<span class="tooltip"><p>Extends the given range such that it contains only full paragraphs.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/indexIsAtBeginningOfParagraph:">&ndash;&nbsp;indexIsAtBeginningOfParagraph:</a></code>
-		
+		<span class="tooltip"><p>Determines if the given index is the first character of a new paragraph.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/rangeOfParagraphAtIndex:">&ndash;&nbsp;rangeOfParagraphAtIndex:</a></code>
-		
+		<span class="tooltip"><p>Returns the string range of the paragraph with the given index.</p></span>
 	</span>
 	
 	
@@ -179,6 +179,53 @@
 	<h3 class="subsubtitle method-title">indexIsAtBeginningOfParagraph:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines if the given index is the first character of a new paragraph.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)indexIsAtBeginningOfParagraph:(NSUInteger)<em>index</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>The index to examine</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the given index is the first character of a new paragraph, <code>NO</code> otherwise</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is done by examining the string, index 0 or characters following a newline are considered to be a first character of a new paragraph.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Paragraphs.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -186,11 +233,105 @@
 	<h3 class="subsubtitle method-title">rangeOfParagraphAtIndex:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the string range of the paragraph with the given index.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfParagraphAtIndex:(NSUInteger)<em>index</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>The paragraph index to inspect</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The string range of the paragraph</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Paragraphs.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/rangeOfParagraphsContainingRange:parBegIndex:parEndIndex:" title="rangeOfParagraphsContainingRange:parBegIndex:parEndIndex:"></a>
 	<h3 class="subsubtitle method-title">rangeOfParagraphsContainingRange:parBegIndex:parEndIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Extends the given range such that it contains only full paragraphs.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfParagraphsContainingRange:(NSRange)<em>range</em> parBegIndex:(NSUInteger *)<em>parBegIndex</em> parEndIndex:(NSUInteger *)<em>parEndIndex</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>range</em></dt>
+			<dd><p>The string range</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parBegIndex</em></dt>
+			<dd><p>An optional output parameter that is filled with the beginning index of the extended range</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parEndIndex</em></dt>
+			<dd><p>An optional output parameter that is filled with the ending index of the extended range</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The extended string range</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+Paragraphs.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -208,7 +349,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -42,17 +44,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/logPosition">&nbsp;&nbsp;&nbsp;&nbsp;- logPosition</option>
-	
 	<option value="//api/name/scanCSSAttribute:value:">&nbsp;&nbsp;&nbsp;&nbsp;- scanCSSAttribute:value:</option>
 	
 	<option value="//api/name/scanCSSURL:">&nbsp;&nbsp;&nbsp;&nbsp;- scanCSSURL:</option>
 	
-	<option value="//api/name/scanDOCTYPE:">&nbsp;&nbsp;&nbsp;&nbsp;- scanDOCTYPE:</option>
-	
 	<option value="//api/name/scanHTMLColor:">&nbsp;&nbsp;&nbsp;&nbsp;- scanHTMLColor:</option>
-	
-	<option value="//api/name/scanHTMLTag:attributes:isOpen:isClosed:">&nbsp;&nbsp;&nbsp;&nbsp;- scanHTMLTag:attributes:isOpen:isClosed:</option>
 	
 	
 	
@@ -63,10 +59,14 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Working with CSS">Working with CSS</a></span></li>
 	
 </ul></li>
 
@@ -80,17 +80,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/logPosition">logPosition</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scanCSSAttribute:value:">scanCSSAttribute:value:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scanCSSURL:">scanCSSURL:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scanDOCTYPE:">scanDOCTYPE:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scanHTMLColor:">scanHTMLColor:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scanHTMLTag:attributes:isOpen:isClosed:">scanHTMLTag:attributes:isOpen:isClosed:</a></span></li>
 	
 </ul></li>
 
@@ -123,6 +117,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Extensions for NSScanner to deal with HTML-specific parsing, primarily CSS-related things</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -130,49 +132,28 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
+						<a title="Working with CSS" name="task_Working with CSS"></a>
 						
-						
-
+<h3 class="subsubtitle task-title">Working with CSS</h3>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/scanHTMLTag:attributes:isOpen:isClosed:">&ndash;&nbsp;scanHTMLTag:attributes:isOpen:isClosed:</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/scanDOCTYPE:">&ndash;&nbsp;scanDOCTYPE:</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/scanCSSAttribute:value:">&ndash;&nbsp;scanCSSAttribute:value:</a></code>
-		
+		<span class="tooltip"><p>Scans for a CSS attribute used in CSS style sheets</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/scanCSSURL:">&ndash;&nbsp;scanCSSURL:</a></code>
-		
+		<span class="tooltip"><p>Scans for URLs used in CSS style sheets</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/scanHTMLColor:">&ndash;&nbsp;scanHTMLColor:</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/logPosition">&ndash;&nbsp;logPosition</a></code>
-		
+		<span class="tooltip"><p>Scans for a typical HTML color, typically either #FFFFFF, rgb(255,255,255) or a HTML color name.</p></span>
 	</span>
 	
 	
@@ -194,15 +175,55 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/logPosition" title="logPosition"></a>
-	<h3 class="subsubtitle method-title">logPosition</h3>
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/scanCSSAttribute:value:" title="scanCSSAttribute:value:"></a>
 	<h3 class="subsubtitle method-title">scanCSSAttribute:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Scans for a CSS attribute used in CSS style sheets</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)scanCSSAttribute:(NSString **)<em>name</em> value:(NSString **)<em>value</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>An optional output parameter that will contain the name of the scanned attribute if successful</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>An optional output parameter that will contain the value of the scanned attribute if successful</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if an URL String could be scanned</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSScanner+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -212,11 +233,46 @@
 	<h3 class="subsubtitle method-title">scanCSSURL:</h3>
 	
 	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/scanDOCTYPE:" title="scanDOCTYPE:"></a>
-	<h3 class="subsubtitle method-title">scanDOCTYPE:</h3>
+	
+	<div class="method-subsection brief-description">
+		<p>Scans for URLs used in CSS style sheets</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)scanCSSURL:(NSString **)<em>urlString</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>urlString</em></dt>
+			<dd><p>An optional output parameter that will contain the scanned URL string if successful</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if an URL String could be scanned</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSScanner+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -226,11 +282,46 @@
 	<h3 class="subsubtitle method-title">scanHTMLColor:</h3>
 	
 	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/scanHTMLTag:attributes:isOpen:isClosed:" title="scanHTMLTag:attributes:isOpen:isClosed:"></a>
-	<h3 class="subsubtitle method-title">scanHTMLTag:attributes:isOpen:isClosed:</h3>
+	
+	<div class="method-subsection brief-description">
+		<p>Scans for a typical HTML color, typically either #FFFFFF, rgb(255,255,255) or a HTML color name.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)scanHTMLColor:(DTColor **)<em>color</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>An optional output parameter that will contain the scanned color if successful</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if a color could be scanned</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSScanner+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -248,7 +339,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

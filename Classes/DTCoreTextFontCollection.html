@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -51,8 +53,6 @@
 	
 	<option value="//api/name/fontFamilyNames">&nbsp;&nbsp;&nbsp;&nbsp;- fontFamilyNames</option>
 	
-	<option value="//api/name/initWithAvailableFonts">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAvailableFonts</option>
-	
 	<option value="//api/name/matchingFontDescriptorForFontDescriptor:">&nbsp;&nbsp;&nbsp;&nbsp;- matchingFontDescriptorForFontDescriptor:</option>
 	
 	
@@ -64,10 +64,18 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Font Collections">Creating Font Collections</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Getting Information about Font Collections">Getting Information about Font Collections</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Searching for Fonts">Searching for Fonts</a></span></li>
 	
 </ul></li>
 
@@ -90,8 +98,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fontDescriptors">fontDescriptors</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fontFamilyNames">fontFamilyNames</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAvailableFonts">initWithAvailableFonts</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/matchingFontDescriptorForFontDescriptor:">matchingFontDescriptorForFontDescriptor:</a></span></li>
 	
@@ -129,6 +135,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Class representing a collection of fonts</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -136,42 +150,51 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Creating Font Collections" name="task_Creating Font Collections"></a>
+						<h3 class="subsubtitle task-title">Creating Font Collections</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/availableFontsCollection">+&nbsp;availableFontsCollection</a></code>
-		
+		<span class="tooltip"><p>Creates a font collection with all available fonts on the system</p></span>
 	</span>
 	
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/initWithAvailableFonts">&ndash;&nbsp;initWithAvailableFonts</a></code>
-		
-	</span>
-	
-	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Getting Information about Font Collections" name="task_Getting Information about Font Collections"></a>
+						<h3 class="subsubtitle task-title">Getting Information about Font Collections</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fontFamilyNames">&ndash;&nbsp;fontFamilyNames</a></code>
-		
+		<span class="tooltip"><p>The font family names that occur in the receiver&rsquo;s list of fonts</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fontDescriptors">&ndash;&nbsp;fontDescriptors</a></code>
-		
+		<span class="tooltip"><p>The font descriptors describing all fonts in the receiver&rsquo;s font collection</p></span>
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Searching for Fonts" name="task_Searching for Fonts"></a>
+						<h3 class="subsubtitle task-title">Searching for Fonts</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/matchingFontDescriptorForFontDescriptor:">&ndash;&nbsp;matchingFontDescriptorForFontDescriptor:</a></code>
-		
+		<span class="tooltip"><p>The font descriptor describing a font in the receiver&rsquo;s collection that matches a given descriptor</p></span>
 	</span>
 	
 	
@@ -195,6 +218,33 @@
 	<h3 class="subsubtitle method-title">availableFontsCollection</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a font collection with all available fonts on the system</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (DTCoreTextFontCollection *)availableFontsCollection</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextFontCollection.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -210,6 +260,33 @@
 	<h3 class="subsubtitle method-title">fontDescriptors</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The font descriptors describing all fonts in the receiver&rsquo;s font collection</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)fontDescriptors</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextFontCollection.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -217,11 +294,31 @@
 	<h3 class="subsubtitle method-title">fontFamilyNames</h3>
 	
 	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/initWithAvailableFonts" title="initWithAvailableFonts"></a>
-	<h3 class="subsubtitle method-title">initWithAvailableFonts</h3>
+	
+	<div class="method-subsection brief-description">
+		<p>The font family names that occur in the receiver&rsquo;s list of fonts</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)fontFamilyNames</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextFontCollection.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -229,6 +326,48 @@
 						<div class="section-method">
 	<a name="//api/name/matchingFontDescriptorForFontDescriptor:" title="matchingFontDescriptorForFontDescriptor:"></a>
 	<h3 class="subsubtitle method-title">matchingFontDescriptorForFontDescriptor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The font descriptor describing a font in the receiver&rsquo;s collection that matches a given descriptor</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (DTCoreTextFontDescriptor *)matchingFontDescriptorForFontDescriptor:(DTCoreTextFontDescriptor *)<em>descriptor</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>descriptor</em></dt>
+			<dd><p>The font descriptor to search for</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The first found font descriptor in the font collection</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextFontCollection.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -246,7 +385,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

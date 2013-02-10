@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -67,8 +69,6 @@
 	
 	<option value="//api/name/drawInContext:">&nbsp;&nbsp;&nbsp;&nbsp;- drawInContext:</option>
 	
-	<option value="//api/name/fixMetricsFromAttachment">&nbsp;&nbsp;&nbsp;&nbsp;- fixMetricsFromAttachment</option>
-	
 	<option value="//api/name/frameOfGlyphAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- frameOfGlyphAtIndex:</option>
 	
 	<option value="//api/name/imageBoundsInContext:">&nbsp;&nbsp;&nbsp;&nbsp;- imageBoundsInContext:</option>
@@ -88,10 +88,18 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Glyph Runs">Creating Glyph Runs</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Drawing">Drawing</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Getting Information">Getting Information</a></span></li>
 	
 </ul></li>
 
@@ -130,8 +138,6 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawInContext:">drawInContext:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fixMetricsFromAttachment">fixMetricsFromAttachment</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/frameOfGlyphAtIndex:">frameOfGlyphAtIndex:</a></span></li>
 	
@@ -177,6 +183,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This class is an Objective-C wrapper around <code>CTRun</code> and represents a glyph run. That is, a number of characters from the original <code>NSAttributedString</code> that share the same characteristics and <a href="#//api/name/attributes">attributes</a>.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -184,126 +198,135 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Creating Glyph Runs" name="task_Creating Glyph Runs"></a>
+						<h3 class="subsubtitle task-title">Creating Glyph Runs</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithRun:layoutLine:offset:">&ndash;&nbsp;initWithRun:layoutLine:offset:</a></code>
-		
+		<span class="tooltip"><p>Creates a new glyph run from a <code>CTRun</code>, belonging to a given layout line and with a given offset from the left line origin.</p></span>
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Drawing" name="task_Drawing"></a>
+						<h3 class="subsubtitle task-title">Drawing</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/drawInContext:">&ndash;&nbsp;drawInContext:</a></code>
+		<span class="tooltip"><p>Draws the receiver into the given context with the position that it derives from the layout line it belongs to.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Getting Information" name="task_Getting Information"></a>
+						<h3 class="subsubtitle task-title">Getting Information</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/frameOfGlyphAtIndex:">&ndash;&nbsp;frameOfGlyphAtIndex:</a></code>
-		
+		<span class="tooltip"><p>Determines the <a href="#//api/name/frame">frame</a> of a specific glyph</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/imageBoundsInContext:">&ndash;&nbsp;imageBoundsInContext:</a></code>
-		
+		<span class="tooltip"><p>The bounds of an image encompassing the entire run.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/stringRange">&ndash;&nbsp;stringRange</a></code>
-		
+		<span class="tooltip"><p>The string range (of the attributed string) that is represented by the receiver</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/stringIndices">&ndash;&nbsp;stringIndices</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/drawInContext:">&ndash;&nbsp;drawInContext:</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/fixMetricsFromAttachment">&ndash;&nbsp;fixMetricsFromAttachment</a></code>
-		
+		<span class="tooltip"><p>The string indices of the receiver</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/frame">&nbsp;&nbsp;frame</a></code>
-		
+		<span class="tooltip"><p>The frame rectangle of the glyph run, relative to the layout frame coordinate system</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/numberOfGlyphs">&nbsp;&nbsp;numberOfGlyphs</a></code>
-		
+		<span class="tooltip"><p>The number of glyphs that the receiver is made up of</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
-		
+		<span class="tooltip"><p>The Core Text attributes that are shared by all gylphs of the receiver</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/hyperlink">&nbsp;&nbsp;hyperlink</a></code>
-		
+		<span class="tooltip"><p>Returns <code>YES</code> if the receiver is part of a hyperlink, <code>NO</code> otherwise</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/ascent">&nbsp;&nbsp;ascent</a></code>
-		
+		<span class="tooltip"><p>The ascent (height above the baseline) of the receiver</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/descent">&nbsp;&nbsp;descent</a></code>
-		
+		<span class="tooltip"><p>The descent (height below the baseline) of the receiver</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/leading">&nbsp;&nbsp;leading</a></code>
-		
+		<span class="tooltip"><p>The leading (additional space above the <a href="#//api/name/ascent">ascent</a>) of the receiver</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
-		
+		<span class="tooltip"><p>The width of the receiver</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/writingDirectionIsRightToLeft">&nbsp;&nbsp;writingDirectionIsRightToLeft</a></code>
-		
+		<span class="tooltip"><p><code>YES</code> if the writing direction is Right-to-Left, otherwise <code>NO</code></p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/attachment">&nbsp;&nbsp;attachment</a></code>
-		
+		<span class="tooltip"><p>The text attachment of the receiver, or <code>nil</code> if there is none</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -325,11 +348,65 @@
 	<h3 class="subsubtitle method-title">ascent</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The ascent (height above the baseline) of the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CGFloat ascent</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/attachment" title="attachment"></a>
 	<h3 class="subsubtitle method-title">attachment</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The text attachment of the receiver, or <code>nil</code> if there is none</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) DTTextAttachment *attachment</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -339,11 +416,65 @@
 	<h3 class="subsubtitle method-title">attributes</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The Core Text attributes that are shared by all gylphs of the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSDictionary *attributes</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/descent" title="descent"></a>
 	<h3 class="subsubtitle method-title">descent</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The descent (height below the baseline) of the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CGFloat descent</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -353,11 +484,65 @@
 	<h3 class="subsubtitle method-title">frame</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The frame rectangle of the glyph run, relative to the layout frame coordinate system</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CGRect frame</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/hyperlink" title="hyperlink"></a>
 	<h3 class="subsubtitle method-title">hyperlink</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the receiver is part of a hyperlink, <code>NO</code> otherwise</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly, getter=isHyperlink) BOOL hyperlink</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -367,11 +552,65 @@
 	<h3 class="subsubtitle method-title">leading</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The leading (additional space above the <a href="#//api/name/ascent">ascent</a>) of the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CGFloat leading</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/numberOfGlyphs" title="numberOfGlyphs"></a>
 	<h3 class="subsubtitle method-title">numberOfGlyphs</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The number of glyphs that the receiver is made up of</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger numberOfGlyphs</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -381,11 +620,65 @@
 	<h3 class="subsubtitle method-title">width</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The width of the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CGFloat width</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/writingDirectionIsRightToLeft" title="writingDirectionIsRightToLeft"></a>
 	<h3 class="subsubtitle method-title">writingDirectionIsRightToLeft</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p><code>YES</code> if the writing direction is Right-to-Left, otherwise <code>NO</code></p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL writingDirectionIsRightToLeft</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -405,11 +698,41 @@
 	<h3 class="subsubtitle method-title">drawInContext:</h3>
 	
 	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/fixMetricsFromAttachment" title="fixMetricsFromAttachment"></a>
-	<h3 class="subsubtitle method-title">fixMetricsFromAttachment</h3>
+	
+	<div class="method-subsection brief-description">
+		<p>Draws the receiver into the given context with the position that it derives from the layout line it belongs to.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)drawInContext:(CGContextRef)<em>context</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>context</em></dt>
+			<dd><p>The graphics context to draw into</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -419,11 +742,95 @@
 	<h3 class="subsubtitle method-title">frameOfGlyphAtIndex:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines the <a href="#//api/name/frame">frame</a> of a specific glyph</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGRect)frameOfGlyphAtIndex:(NSInteger)<em>index</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>The index of the glyph</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="#//api/name/frame">frame</a> of the glyph</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/imageBoundsInContext:" title="imageBoundsInContext:"></a>
 	<h3 class="subsubtitle method-title">imageBoundsInContext:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The bounds of an image encompassing the entire run.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGRect)imageBoundsInContext:(CGContextRef)<em>context</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>context</em></dt>
+			<dd><p>The graphics context used for the measurement</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The rectangle containing the result</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -433,6 +840,54 @@
 	<h3 class="subsubtitle method-title">initWithRun:layoutLine:offset:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a new glyph run from a <code>CTRun</code>, belonging to a given layout line and with a given offset from the left line origin.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithRun:(CTRunRef)<em>run</em> layoutLine:(DTCoreTextLayoutLine *)<em>layoutLine</em> offset:(CGFloat)<em>offset</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>run</em></dt>
+			<dd><p>The Core Text glyph run to wrap</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>layoutLine</em></dt>
+			<dd><p>The layout line that this glyph run belongs to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd><p>The offset from the left line origin to place the glyph run at
+@retuns An initialized DTCoreTextGlyphRun</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -440,11 +895,75 @@
 	<h3 class="subsubtitle method-title">stringIndices</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The string indices of the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)stringIndices</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array of string indices</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/stringRange" title="stringRange"></a>
 	<h3 class="subsubtitle method-title">stringRange</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The string range (of the attributed string) that is represented by the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSRange)stringRange</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The range</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextGlyphRun.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -462,7 +981,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-09)</span><br />
+						<p><span class="copyright">&copy; 2013 Cocoanetics. All rights reserved. (Last updated: 2013-02-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
